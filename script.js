@@ -47,6 +47,7 @@ const monsters = [
   }
 ];
 
+// TO-DO: alter orderings of obj properties' values to align with images
 const locations = [
   {
     name: "town square",
@@ -98,11 +99,6 @@ const locations = [
   }
 ];
 
-// initialize buttons
-button1.onclick = goStore;
-button2.onclick = goCave;
-button3.onclick = fightDragon;
-
 function update(location) {
   monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
@@ -112,6 +108,7 @@ function update(location) {
   button2.onclick = location["button functions"][1];
   button3.onclick = location["button functions"][2];
   text.innerText = location.text;
+  // TO-DO: add switch cases to call images
 }
 
 function goTown() {
@@ -296,3 +293,7 @@ function pick(guess) {
     }
   }
 }
+
+button1.onclick = goStore;
+button2.onclick = goCave;
+button3.onclick = fightDragon;
